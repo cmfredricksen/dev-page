@@ -75,7 +75,7 @@ p.footc {
 }
 
 .p4 {
-    font-family: fantasy;
+    font-family: 'Courier new';
     padding: 0 .25em;
   
 }
@@ -120,7 +120,7 @@ a {
 }
 
 a:hover {
-    color: deeppink;
+    color: palegreen;
 }
 
 .nav {
@@ -128,7 +128,7 @@ a:hover {
     box-sizing: border-box;
     display: block ruby;
     font-size: 2em;
-    background-color: palegreen;
+    background-color: orchid;
     padding: .75em 0;
     
 
@@ -146,7 +146,7 @@ a:hover {
 
 .foot {
     grid-area: foot;
-    background-color: palegreen;
+    background-color: orchid;
     color: indigo;
     
     
