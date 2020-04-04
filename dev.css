@@ -12,16 +12,15 @@ body {
     background: midnightblue;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: 1fr .5fr 1fr 1fr 1fr 1.5fr;
+    grid-template-columns: 100vw;
+    grid-template-rows: .5fr .25fr 1fr 1fr 1fr .25fr;
     grid-template-areas: 
     "header"
     "nav"
     "main"
     "main"
     "main"
-    "foot";
-    
-    
+    "foot";    
 }
 
 h1, h3 {
@@ -37,7 +36,6 @@ h2 {
     margin-top: .25em;
     font-weight: normal;
     margin-left: .5em;
-    font-weight: bolder;
 }
 
 h3 {
@@ -71,7 +69,7 @@ p.footc {
 
 .p3 {
     color: black;
-    margin: .1em .25em;
+    margin: .1em .5em;
 }
 
 .p4 {
@@ -84,39 +82,43 @@ header {
     grid-area: header;
     display: grid;
     margin-top: 2em;
-    
-    text-align: center;
-    
+    width: 100vw;
+    text-align: center;    
 }
 
 ol {
     color: black;
-    margin-left: 2em;
+    margin-left: 1.5em;
     display: block;
-    line-height: 1.2em;
+    line-height: 1.5em;
+    list-style: circle;
+    
 }
 
 ul {
     
     list-style: none;
-    display: inline-flex;
-    margin: auto;
-
-   
-    
-    
+    display: inline-block;
+    max-width: 100vw;   
 }
 
 li {
-    margin: 0 .5em;
+    
+    display: inline-block;
+    font-size: .75em;
+
+}
+
+.li2 {
+    font-size: 1em;
+    margin-right: .5em;
 }
 
 a {
     text-decoration: none;
-    margin: .5em 0;
-    padding-top: 1em;
+    
+    padding: .5em .5em;
     color: darkmagenta;
-
 }
 
 a:hover {
@@ -126,42 +128,29 @@ a:hover {
 .nav {
     grid-area: nav;
     box-sizing: border-box;
-    display: block ruby;
     font-size: 2em;
     background-color: orchid;
-    padding: .75em 0;
-    
-
-    
-    
+    text-align: center; 
 }
 
 .main {
     grid-area: main;
     margin: .5em 0;
-    display: grid;
-    
+    display: grid;    
 }
 
 
 .foot {
     grid-area: foot;
     background-color: orchid;
-    color: indigo;
-    
-    
+    color: indigo;   
 }
 
 
 .box2 {
     background-color: lightseagreen;
-    color: deepskyblue;
-    
     height: auto;
-    margin: .25em;
-    font-family: 'Courier New', Courier, monospace;
-    
-    
+    font-family: 'Courier New', Courier, monospace;    
 }
 
 .a2 {
@@ -173,87 +162,9 @@ a:hover {
     background-color: darkmagenta;
     color: darkseagreen;
     height: auto;
-    margin: .25em;
-    
+       
 }
 
 
 /*for large screens*/
 
-@media only screen and (min-width: 800px) {
-    
-   body {
-       
-    grid-template-columns: 1fr  1fr 1fr;
-    grid-template-rows: 1fr .5fr 1fr;
-       
-       
-   }
-    
-    header {
-        margin: 0;
-        
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-       
-        
-    }
-
-    .nav { 
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        margin: 0;
-        padding: .75em 0;
-    } 
-    
-    a {
-        text-shadow: none;
-    }
-
-
-   
-
-    .main {
-        grid-row: 1 / 4;
-        grid-column: 2 / 4;
-        padding-left: .25em;
-        padding-bottom: .25em;
-        margin: 0;
-        border-bottom: 5px solid palegreen;
-        border-left: 5px solid palegreen;
-        
-        
-    }
-
-    .box2 {
-        box-shadow: none;
-        margin: 0;
-        
-    }
-
-    .box3 {
-        box-shadow: none;
-        margin: 0;
-        background-color: darkmagenta;
-    }
-
-
-    .foot {
-        grid-row: 3 / 4;
-        grid-column: 1 / 2;
-        background-color: midnightblue;
-        border-bottom: 5px solid palegreen;
-        margin-top: 5em;
-        
-    
-        
-    }
-
-    p.footc {
-        text-shadow: 1px 1px 1px deepskyblue;
-        color: palegreen;
-        margin-left: 0;
-        
-        
-    }
-}
